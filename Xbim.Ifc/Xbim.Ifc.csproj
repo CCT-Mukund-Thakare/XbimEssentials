@@ -10,6 +10,7 @@
 	XbimReferencedModel
   </Description>
 	<RootNamespace>Xbim.Ifc</RootNamespace>
+	<Version>5.1.341</Version>
   </PropertyGroup>
   <ItemGroup>
 	<Folder Include="Properties\" />

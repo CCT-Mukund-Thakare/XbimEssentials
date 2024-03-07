@@ -3,6 +3,7 @@
     <TargetFrameworks>net45;net46;net47;netstandard2.0;netstandard2.1;netcoreapp3.1</TargetFrameworks>
     <Title>Xbim IO for in-Memory Models</Title>
     <Description>Manages IFC or STEP Model backed by an in-memory representation</Description>
+    <Version>5.1.341</Version>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Xbim.Common\Xbim.Common.csproj" />

@@ -3,6 +3,7 @@
     <TargetFrameworks>net45;net46;net47;netstandard2.0;netstandard2.1;netcoreapp3.1</TargetFrameworks>
     <Title>Xbim Common</Title>
     <Description>Provides support for the Xbim commonly used behaviours and interfaces.</Description>
+    <Version>5.1.341</Version>
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1' ">
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.3" />
