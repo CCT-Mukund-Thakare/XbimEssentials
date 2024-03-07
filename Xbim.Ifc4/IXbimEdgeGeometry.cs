@@ -1,13 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xbim.Common.Geometry;
-
 using Xbim.Ifc4.Interfaces;
 
 namespace Xbim.Ifc4
