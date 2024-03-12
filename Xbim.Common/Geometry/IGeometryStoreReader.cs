@@ -11,6 +11,12 @@ namespace Xbim.Common.Geometry
         IEnumerable<XbimShapeInstance> ShapeInstances { get; }
 
         /// <summary>
+        /// Returns an enumerable of all the shape instances in the store
+        /// </summary>
+        IXbimEdgeSet ShapeEdges(int shapeGeometryLabel);
+
+
+        /// <summary>
         /// Returns an enumerable of all the shape instances in the store with the specified context Id
         /// </summary>
         IEnumerable<XbimShapeInstance> ShapeInstancesOfContext(int contextId);

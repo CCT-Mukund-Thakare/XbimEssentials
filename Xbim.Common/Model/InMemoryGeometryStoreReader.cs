@@ -21,6 +21,13 @@ namespace Xbim.Common.Model
             }
         }
 
+        public IEnumerable<IXbimEdgeSet> ShapeEdges
+        {
+            get
+            {
+                return _inMemoryGeometryStore.EdgeGeometries.Values;
+            }
+        }
         public IEnumerable<XbimShapeInstance> ShapeInstancesOfContext(int contextId)
         {
             return _inMemoryGeometryStore.ShapeInstances.Values.Where(s=>s.RepresentationContext==contextId);
@@ -110,6 +117,14 @@ namespace Xbim.Common.Model
                 bBox.Union(shape.BoundingBox);
             }
             return bBox;
+        }
+
+        IXbimEdgeSet IGeometryStoreReader.ShapeEdges(int shapeGeometryLabel)
+        {
+            IXbimEdgeSet shape;
+            if (_inMemoryGeometryStore.EdgeGeometries.TryGetValue(shapeGeometryLabel, out shape))
+                return shape;
+            return null;
         }
     }
 }

@@ -10,6 +10,7 @@ namespace Xbim.Common.Model
     {
         private ConcurrentDictionary<int, XbimShapeGeometry> _shapeGeometries=new ConcurrentDictionary<int, XbimShapeGeometry>();
         private ConcurrentDictionary<int, XbimShapeInstance> _shapeInstances=new ConcurrentDictionary<int, XbimShapeInstance>();
+        private ConcurrentDictionary<int, IXbimEdgeSet> _shapeEdges = new ConcurrentDictionary<int, IXbimEdgeSet>();
         private Dictionary<int, List<XbimShapeInstance>> _entityInstanceLookup=new Dictionary<int, List<XbimShapeInstance>>();
         private Dictionary<int, List<XbimShapeInstance>> _entityTypeLookup=new Dictionary<int, List<XbimShapeInstance>>();
         private Dictionary<int, List<XbimShapeInstance>> _entityStyleLookup=new Dictionary<int, List<XbimShapeInstance>>();
@@ -22,6 +23,17 @@ namespace Xbim.Common.Model
         public IDictionary<int, XbimShapeGeometry> ShapeGeometries
         {
             get { return _shapeGeometries; }
+        }
+
+        internal int AddEdgeGeometry(int id,IXbimEdgeSet edgeGeometry)
+        {
+            _shapeEdges.TryAdd(id, edgeGeometry);
+            return id;
+        }
+
+        public IDictionary<int, IXbimEdgeSet> EdgeGeometries
+        {
+            get { return _shapeEdges; }
         }
 
         internal int AddShapeGeometry(XbimShapeGeometry shapeGeometry)

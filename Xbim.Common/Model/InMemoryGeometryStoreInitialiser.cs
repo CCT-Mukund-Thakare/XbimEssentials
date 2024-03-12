@@ -15,10 +15,17 @@ namespace Xbim.Common.Model
           return  _inMemoryGeometryStore.AddShapeGeometry(shapeGeometry);           
         }
 
+        public int AddEdgeGeometry(int id,IXbimEdgeSet shapeGeometry)
+        {
+            return _inMemoryGeometryStore.AddEdgeGeometry(id,shapeGeometry);
+        }
+
         public int AddShapeInstance(XbimShapeInstance shapeInstance, int geometryId)
         {           
            return _inMemoryGeometryStore.AddShapeInstance(shapeInstance, geometryId);
         }
+
+
 
         public int AddRegions(XbimRegionCollection regions)
         {

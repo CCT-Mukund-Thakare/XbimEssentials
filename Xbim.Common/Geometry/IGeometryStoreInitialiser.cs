@@ -13,6 +13,14 @@ namespace Xbim.Common.Geometry
         int AddShapeGeometry(XbimShapeGeometry shapeGeometry);
 
         /// <summary>
+        /// Adds a shape geometry to the store under transaction
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="shapeGeometry"></param>
+        /// <returns>Returns the ID of the shape geometry</returns>
+        int AddEdgeGeometry(int id,IXbimEdgeSet shapeGeometry);
+
+        /// <summary>
         /// Adds a shape instance to the store under transaction
         /// </summary>
         /// <param name="shapeInstance">The shape instance data</param>
